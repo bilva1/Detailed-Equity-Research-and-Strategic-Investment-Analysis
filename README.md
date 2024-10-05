@@ -1,0 +1,1 @@
+# Detailed-Equity-Research-and-Strategic-Investment-Analysis
