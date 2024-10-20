@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <title>Equity Analysis</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Equity Analysis</h1>
+      <p>
+        <em>
+          Find the company stock symbol here:
+          <a href="https://finance.yahoo.com" target="_blank">Yahoo Finance</a>
+        </em>
+      </p>
+      <form id="equityForm" onsubmit="return false;">
+        <input
+          type="text"
+          id="companyName"
+          placeholder="Enter company stock symbol (e.g., AAPL)"
+          required
+        />
+        <button class="btn" type="button" onclick="generateEquityAnalysis()">
+          Generate Equity Analysis
+        </button>
+      </form>
+      <div id="result" style="display: none">
+        <h2>Equity Trend Analysis for <span id="companyDisplay"></span></h2>
+        <p id="stockPrice"></p>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>
